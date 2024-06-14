@@ -180,5 +180,5 @@ Please contact them if the software you need is not available via ema
 ### - Running Visual Studio
 - Press `F1` in Visual Studio
 - `Remote SSH Connect`
-- Select `Noctual-ln1`
+- Select `Noctua-ln1`
 - If you need further information, then please visit: [PC2-Documentation](https://upb-pc2.atlassian.net/wiki/spaces/PC2DOK/overview?mode=global). 
