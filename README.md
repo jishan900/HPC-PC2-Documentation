@@ -150,7 +150,7 @@ To improve performance and manage disk usage efficiently, create a symbolic link
 mkdir -p /scratch/hpc-prf-mypr/username/.vscode-cli
 ln -s /scratch/hpc-prf-mypr/username/.vscode-cli ~/.vscode-cli
 ```
-# 5. Software and Tools
+## 5. Software and Tools
 There are several ways to get the software you need:
 
 - Using preinstalled Software
@@ -160,7 +160,7 @@ There are several ways to get the software you need:
 
 Please contact them if the software you need is not available via email. For example, in the Noctua-1 cluster, several software and packages were missing so  I contacted them several times and fixed them. (Support E-mail address: pc2-support@uni-paderborn.de). 
 
-# 6. Access in Cloud and Visual Studio  
+## 6. Access in Cloud and Visual Studio  
 ### - Running Cloud
 - Go to CMD or Anaconda Prompt, enter: `ssh noctua-ln1`
 - For VStudio, enter: `code tunnel --verbose`
