@@ -248,3 +248,6 @@ Now, it is time to check my script is execute properly or not. So, for execute a
 
 So, we can see that our job is completed.
 ![image](https://github.com/jishan900/HPC-PC2-Documentation/assets/32738421/7703e601-34ae-4dbb-87d4-2dd3522ec986)
+
+
+![image (1)](https://github.com/jishan900/HPC-PC2-Documentation/assets/32738421/8faf667b-d5e1-46bb-853f-3e1e91e83f14)
