@@ -4,7 +4,6 @@
 An HPC cluster system consists of many server computers (nodes) that are connected via a high-speed network and operated in a data centre.
 The server computers are built to execute computationally intensive research applications. This documentation will help those who want to install and run Noctua-1. 
 
-
 ## 1. Setting Up the VPN Tunnel
 
 - Install personal network certificate
@@ -67,7 +66,7 @@ This guide provides detailed instructions on how to set up and use remote tunnel
 
 ### Prerequisites
 
-- Access to a remote server (e.g., Noctua 2)
+- Access to a remote server (e.g., Noctua 1)
 - SSH access to the remote machine
 - Local machine with internet connection
 
@@ -182,3 +181,68 @@ Please contact them if the software you need is not available via ema
 - `Remote SSH Connect`
 - Select `Noctua-ln1`
 - If you need further information, then please visit: [PC2-Documentation](https://upb-pc2.atlassian.net/wiki/spaces/PC2DOK/overview?mode=global). 
+## IMPORTANT: Run Python Script in Noctua Cluster - 1
+
+If you need to install any particular library or something, you need to contact the GPU authorities, and their contact details are already given in the previous section. For example, I needed the Tensorflow GPU version, but that library was only available in the Noctua-2 Cluster. So, I contacted them and gave them details of what I needed to do, and they installed it and informed me when it was done.  
+
+
+If you want to check which module are available in this cluser then use the following command: 
+
+- `module avail or ml avail`
+
+
+If you need any particular library and want to check whether is it already available or not, then simply use the following command in your CMD:
+
+- `module spider or ml spider`
+
+Display description of a selected module (e.g. Tensorflow): 
+
+- `module spider tensorflow or ml spider tensorflow`
+
+Display help, usage information for modules: 
+
+- `ml help`
+
+Running a Python script is a bit tricky in this Noctua-1 cluster cloud GPU. I am presenting an example, which I did, and scripts are available in the current repository. So, first of all, we need to write a shell script that gives details on which library we need to load and how much GPU memory we need to execute this program. 
+
+**SLURM Script:** [Shell Script](https://github.com/jishan900/HPC-PC2-Documentation/blob/master/Test_TF/job.sh).
+
+```bash
+#!/bin/bash: Specifies the script interpreter to be the Bash shell.
+#SBATCH -n1: Requests 1 task (core) for the job.
+#SBATCH -t 5: Sets a time limit of 5 minutes for the job.
+#SBATCH -p gpu: Requests the job to run in the GPU partition.
+#SBATCH --gres=gpu:a40:1: Requests 1 A40 GPU for the job.
+#SBATCH --mem=45G: Requests 45GB of memory.
+#SBATCH -q express: Specifies the Quality of Service (QoS) for the job, which can be adjusted as per the requirements.
+```
+
+##### Use the parallel file system for working directory
+- `cd $PC2PFS`
+
+
+Resets the module environment and loads the necessary modules for the job.
+
+```bash
+module reset
+module load lib/TensorFlow/2.9.1-foss-2022a-CUDA-11.7.0
+module load vis
+module load matplotlib/3.7.0-gfbf-2022b
+python /pc2/users/l/ltsbo2/Test_TF/test.py
+```
+
+- Module reset: Resets the module environment to the default state.
+- Module load lib/TensorFlow/2.9.1-foss-2022a-CUDA-11.7.0: Loads TensorFlow version 2.9.1 with the specified compiler and CUDA version.
+- Module load vis: Loads visualization tools (details depend on the specific system configuration).
+- Module load matplotlib/3.7.0-gfbf-2022b: Loads Matplotlib version 3.7.0.
+- Python /pc2/users/l/ltsbo2/Test_TF/test.py: Runs the test.py script located in the specified directory using Python.
+
+**Python Script:** Then I write a simple Python test script to check is it working well or not. [Python Script](https://github.com/jishan900/HPC-PC2-Documentation/blob/master/Test_TF/test.py).
+
+Now, it is time to check my script is execute properly or not. So, for execute a script, first go to the terminal, activate cloud along with VPN and then write the following command:
+
+- Job submission and you will get a job ID from here: `sbatch job.sh` 
+- Check job status (Job ID: 3077515): `sacct -j 3077515`
+- SLURM typically writes the output and error text: `ls -l slurm-3077515.out `
+- View the contents of the output file: `cat slurm-3077515.out`
+
