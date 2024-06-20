@@ -246,3 +246,4 @@ Now, it is time to check my script is execute properly or not. So, for execute a
 - SLURM typically writes the output and error text: `ls -l slurm-3077515.out `
 - View the contents of the output file: `cat slurm-3077515.out`
 
+![image](https://github.com/jishan900/HPC-PC2-Documentation/assets/32738421/7703e601-34ae-4dbb-87d4-2dd3522ec986)
