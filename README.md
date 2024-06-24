@@ -1,4 +1,3 @@
-
 # Documentation for access in Noctua-1 Cluster 
 
 An HPC cluster system consists of many server computers (nodes) that are connected via a high-speed network and operated in a data centre.
