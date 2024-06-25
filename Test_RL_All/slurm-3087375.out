@@ -1,0 +1,48 @@
+cpu-bind=MASK - gpu-0006, task  0  0 [3494987]: mask |--------------------||||-B------------------|  set
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+Requirement already satisfied: gym[atari,classic_control,mujoco] in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (0.26.2)
+Requirement already satisfied: tqdm in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (4.66.4)
+Requirement already satisfied: progressbar2 in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (4.4.2)
+Requirement already satisfied: cloudpickle in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (3.0.0)
+Requirement already satisfied: gym-notices>=0.0.4 in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (from gym[atari,classic_control,mujoco]) (0.0.8)
+Requirement already satisfied: numpy>=1.18.0 in /cm/shared/apps/pc2/EB-SW/software/SciPy-bundle/2022.05-foss-2022a/lib/python3.10/site-packages (from gym[atari,classic_control,mujoco]) (1.22.3)
+Requirement already satisfied: imageio>=2.14.1 in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (from gym[atari,classic_control,mujoco]) (2.34.2)
+Requirement already satisfied: mujoco==2.2 in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (from gym[atari,classic_control,mujoco]) (2.2.0)
+Requirement already satisfied: ale-py~=0.8.0 in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (from gym[atari,classic_control,mujoco]) (0.8.1)
+Requirement already satisfied: pygame==2.1.0 in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (from gym[atari,classic_control,mujoco]) (2.1.0)
+Requirement already satisfied: pyopengl in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (from mujoco==2.2->gym[atari,classic_control,mujoco]) (3.1.7)
+Requirement already satisfied: absl-py in /cm/shared/apps/pc2/EB-SW/software/TensorFlow/2.9.1-foss-2022a-CUDA-11.7.0/lib/python3.10/site-packages (from mujoco==2.2->gym[atari,classic_control,mujoco]) (1.2.0)
+Requirement already satisfied: glfw in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (from mujoco==2.2->gym[atari,classic_control,mujoco]) (2.7.0)
+Requirement already satisfied: python-utils>=3.8.1 in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (from progressbar2) (3.8.2)
+Requirement already satisfied: importlib-resources in /cm/shared/apps/pc2/EB-SW/software/Python/3.10.4-GCCcore-11.3.0/lib/python3.10/site-packages (from ale-py~=0.8.0->gym[atari,classic_control,mujoco]) (5.7.1)
+Requirement already satisfied: typing-extensions in /cm/shared/apps/pc2/EB-SW/software/Python/3.10.4-GCCcore-11.3.0/lib/python3.10/site-packages (from ale-py~=0.8.0->gym[atari,classic_control,mujoco]) (4.2.0)
+Requirement already satisfied: pillow>=8.3.2 in /pc2/users/l/ltsbo2/.local/lib/python3.10/site-packages (from imageio>=2.14.1->gym[atari,classic_control,mujoco]) (10.3.0)
+WARNING: You are using pip version 22.0.4; however, version 24.1 is available.
+You should consider upgrading via the '/cm/shared/apps/pc2/EB-SW/software/Python/3.10.4-GCCcore-11.3.0/bin/python3.10 -m pip install --upgrade pip' command.
+[gpu-0006:3495108] MCW rank 0 is not bound (or bound to all available processors)
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: gpu-0006
+--------------------------------------------------------------------------
+TensorFlow CUDA support:  True
+Available GPUs:  [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+NumPy version:  1.22.3
+SciPy version:  1.8.1
+2024-06-25 16:09:07,316	INFO worker.py:1770 -- Started a local Ray instance.
+Ray is running
+Usage: test.py [OPTIONS]
+
+Options:
+  --help  Show this message and exit.
