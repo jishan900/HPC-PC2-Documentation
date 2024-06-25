@@ -260,4 +260,4 @@ And, this is the output. We can see that task is complete and save plots in the 
 - For example, I am using `lang/Python/3.10.4-GCCcore-11.3.0`
 - Load Module, please use `module load lang/Python/3.10.4-GCCcore-11.3.0`
 - For install a library, first load module and then use pip install. Example: `pip3 install --user gym[mujoco,atari,classic_control] tqdm progressbar2 cloudpickle`
-- After installing all the libraries of RL, I checked whether all libraries were working fine or not. Here is the link for that supporting code and shell script. **Check here:** [Test_RL_All]([https://upb-pc2.atlassian.net/wiki/spaces/PC2DOK/pages/1902497/Python](https://github.com/jishan900/HPC-PC2-Documentation/tree/master/Test_RL_All)).
+- After installing all the libraries of RL, I checked whether all libraries were working fine or not. Here is the link for that supporting code and shell script. **Check here:** [Test_RL_All](https://github.com/jishan900/HPC-PC2-Documentation/tree/master/Test_RL_All).
