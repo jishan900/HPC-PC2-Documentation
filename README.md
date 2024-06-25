@@ -253,3 +253,7 @@ So, we can see that our job is completed.
 
 And, this is the output. We can see that task is complete and save plots in the cloud directory. 
 ![image (1)](https://github.com/jishan900/HPC-PC2-Documentation/assets/32738421/8faf667b-d5e1-46bb-853f-3e1e91e83f14)
+
+
+## Python Version and Module
+**Check here:** [Python Version & Module](https://upb-pc2.atlassian.net/wiki/spaces/PC2DOK/pages/1902497/Python).
