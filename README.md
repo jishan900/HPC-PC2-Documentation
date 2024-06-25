@@ -257,5 +257,5 @@ And, this is the output. We can see that task is complete and save plots in the 
 
 ## Python Version and Module
 **Check here:** [Python Version & Module](https://upb-pc2.atlassian.net/wiki/spaces/PC2DOK/pages/1902497/Python).
-For example, I am using `lang/Python/3.10.4-GCCcore-11.3.0`
-Load Module, please use `module load lang/Python/3.10.4-GCCcore-11.3.0`
+- For example, I am using `lang/Python/3.10.4-GCCcore-11.3.0`
+- Load Module, please use `module load lang/Python/3.10.4-GCCcore-11.3.0`
