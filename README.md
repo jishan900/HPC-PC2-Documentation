@@ -12,6 +12,7 @@ The server computers are built to execute computationally intensive research app
 - Import configuration file
 - Establish VPN connection 
 
+
 ## 2. Access with SSH
 - Use PuTTYgen to generate public and private keys. Send the public key to the following email address so they can add it to your profile (E-mail address: pc2-support@uni-paderborn.de). 
 
